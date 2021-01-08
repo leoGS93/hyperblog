@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -16,7 +16,8 @@
         @livewireStyles
 
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.js" defer></script>
+        <script src="{{ mix('dist/js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -38,7 +39,7 @@
         @stack('modals')
 
         @livewireScripts
-        {{-- <div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
+        <div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
             <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
               <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
                 <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Flowtrail UI</a>
@@ -69,24 +70,6 @@
                 </div>
               </nav>
             </div>
-          </div> --}}
-    {{-- </body>
-</html> --}} --}}
-
-
-@extends('../layoutP/base')
-
-@section('body')
-    <body class="app">
-        @yield('content')
-        @include('../layoutP/components/dark-mode-switcher')
-
-        <!-- BEGIN: JS Assets-->
-        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
-        <script src="{{ mix('js/app.js') }}"></script>
-        <!-- END: JS Assets-->
-
-        @yield('script')
+          </div>
     </body>
-@endsection
+</html>
