@@ -1,5 +1,5 @@
 body{
-    color: red;
+color: red;
     text-align: center;
     font-family: "Arial";
     font-size: 16px;
@@ -9,14 +9,14 @@ body{
 
 }
 #cabecera{
-    background: green;
-    color: blue;
-    box-shadow: 0px 5px 30px 0px;
-    margin: 0;
-    padding: 0.5em;
+background: green;
+color: blue;
+box-shadow: 0px 5px 30px 0px;
+margin: 0;
+padding: 0.5em;
 }
 #container{
-    width: 70%;
+width: 70%;
 padding: 1em;
 text-align: left;
 border:solid rgb(63, 15, 15);
